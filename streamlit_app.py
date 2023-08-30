@@ -11,7 +11,7 @@ df = pd.read_csv("Vars.csv")
 
 add_selectbox = st.sidebar.selectbox(
     "Choose your inputs",
-    (df['EV')
+    (df['EV'])
 )
 
 # with st.sidebar:
