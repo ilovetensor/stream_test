@@ -10,21 +10,23 @@ ev = st.slider("Choose EV",0,100)
 release_speed = st.slider("Choose Release Speed",60,110)
 fav_platoon_split_for_batter = st.selectbox("Good Platoon Split?", [0,1])
 game_elevation = st.slider("Choose Game Elevation",20,7349) 
-pull_percent =  st.slider("Choose Pull %",0,100)
+pull_percent =  st.slider("Choose Pull %",0.0,1.0)
 
-df = pd.read_csv('final_input.csv')
+# df = pd.read_csv('final_input.csv')
 
-df['launch_angle'].iloc[0] = la
-df['launch_speed'].iloc[0] = ev
-df['release_speed'].iloc[0] = release_speed
-df['fav_platoon_split_for_batter'].iloc[0] = fav_platoon_split_for_batter
-df['game_elevation'].iloc[0] = game_elevation
-df['pull_percent'].iloc[0] = pull_percent
+# df['launch_angle'].iloc[0] = la
+# df['launch_speed'].iloc[0] = ev
+# df['release_speed'].iloc[0] = release_speed
+# df['fav_platoon_split_for_batter'].iloc[0] = fav_platoon_split_for_batter
+# df['game_elevation'].iloc[0] = game_elevation
+# df['pull_percent'].iloc[0] = pull_percent
 
-def predict():
-    prediction = model.predict(df)
+# def predict():
+#     return model.predict(df)
 
-trigger = st.button('Predict', on_click=predict)
 
-st.title(prediction[0])
+
+# trigger = st.button('Predict', on_click=predict)
+
+# st.title(prediction[0])
 
