@@ -10,8 +10,10 @@ st.write('Hello world!')
 df = pd.read_csv("Vars.csv")
 
 add_selectbox = st.sidebar.selectbox(
-    "Choose your inputs",
-    (df['EV'])
+    "Exit Velocity",
+    (df['EV']),
+    "Launch Angle",
+    (df['LA'])
 )
 
 # with st.sidebar:
