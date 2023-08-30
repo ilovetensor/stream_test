@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
-import joblib
+# import joblib
 
-model = joblib.load('xgbr.joblib')
+# model = joblib.load('xgbr.joblib')
+
 
 st.title('Distance Predictor')
 la = st.slider("Choose LA",-50,50)
