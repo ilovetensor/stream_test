@@ -9,17 +9,19 @@ st.write('Hello world!')
 
 df = pd.read_csv("Vars.csv")
 
-add_selectbox = st.sidebar.selectbox(
-    "Exit Velocity",
-    (df['EV'])
-)
-
 la = st.sidebar.selectbox(
     "Launch Angle",
     (df['LA'])
 )
 
-st.write('You selected:', la)
+ev = st.sidebar.selectbox(
+    "Exit Velocity",
+    (df['EV'])
+)
+
+st.write('Launch Angle:', la)
+
+st.write('Exit Velocity:', ev)
 
 # with st.sidebar:
 #     add_radio = st.radio(
