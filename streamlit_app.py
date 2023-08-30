@@ -7,6 +7,7 @@ st.title('Baseball')
 df = pd.read_csv("Vars.csv")
 
 la = st.sidebar.selectbox(
+    st.title('Eneter Input Vars...')
     "Launch Angle",
     (df['LA'])
 )
