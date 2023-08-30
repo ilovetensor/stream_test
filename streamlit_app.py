@@ -24,6 +24,6 @@ df['pull_percent'].iloc[0] = pull_percent
 
 st.dataframe(df)
 
-p =  model.predict(df)
+# p =  model.predict(df)
 
-st.write(p[0])
+# st.write(p[0])
