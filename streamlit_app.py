@@ -26,6 +26,6 @@ df['pull_percent'].iloc[0] = pull_percent
 
 # st.write(p[0])
 
-st.dataframe(df)
+st.dataframe("Choosen Variables", df)
 
 
