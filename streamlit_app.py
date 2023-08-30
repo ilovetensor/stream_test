@@ -7,7 +7,7 @@ import joblib
 st.title('Distance Predictor')
 
 la = st.slider("Choose LA",-50,50)
-ev = st.slider("Choose EV (MHP)",60,120)
+ev = st.slider("Choose EV (MPH)",60,120)
 release_speed = st.slider("Choose Release Speed (MPH)",60,110)
 fav_platoon_split_for_batter = st.selectbox("Good Platoon Split?", [0,1])
 game_elevation = st.slider("Choose Game Elevation ()Feet",20,7349) 
