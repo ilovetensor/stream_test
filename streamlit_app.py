@@ -1,5 +1,11 @@
 import streamlit as st
+from utils import PrepProcesor, columns 
+
+import numpy as np
 import pandas as pd
+import joblib
+
+model = joblib.load('xgbpipe.joblib')
 
 st.title('Distance Predictor')
 
@@ -14,3 +20,14 @@ fav_platoon_split_for_batter = st.selectbox("Good Platoon Split?", [0,1])
 game_elevation = st.slider("Choose Game Elevation",20,7349) 
 
 pull_percent =  st.slider("Choose Pull %",0,100)
+
+def predict(): 
+    row = np.array([la,ev,release_speed,fav_platoon_split_for_batter,game_elevation,pull_percent]) 
+    X = pd.DataFrame([row], columns = columns)
+    prediction = model.predict(X)
+    if prediction[0] == 1: 
+        st.success('Passenger Survived :thumbsup:')
+    else: 
+        st.error('Passenger did not Survive :thumbsdown:') 
+
+trigger = st.button('Predict', on_click=predict)
