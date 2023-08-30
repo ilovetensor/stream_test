@@ -14,10 +14,12 @@ add_selectbox = st.sidebar.selectbox(
     (df['EV'])
 )
 
-add_selectbox = st.sidebar.selectbox(
+la = st.sidebar.selectbox(
     "Launch Angle",
     (df['LA'])
 )
+
+st.write('You selected:', la)
 
 # with st.sidebar:
 #     add_radio = st.radio(
