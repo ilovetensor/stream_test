@@ -7,7 +7,7 @@ st.title('🎈 App Name')
 st.write('Hello world!')
 
 
-df = pd.read_csv("https://github.com/dec1costello/stream_test/blob/main/Vars.csv")
+df = pd.read_csv("Vars.csv")
 
 with st.sidebar:
     add_radio = st.radio(
