@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import joblib
 
-model = joblib.load('xgbpipe.joblib')
+model = joblib.load('xgbr.joblib')
 
 st.title('Distance Predictor')
 
@@ -23,16 +23,12 @@ pull_percent =  st.slider("Choose Pull %",0,100)
 
 prediction = 0
 
-# def predict(): 
-#     row = np.array([la,ev,release_speed,fav_platoon_split_for_batter,game_elevation,pull_percent]) 
-#     X = pd.DataFrame([row], columns = columns)
-#     prediction = model.predict(X)
-#     if prediction[0] == 1: 
-#         st.success('Passenger Survived :thumbsup:')
-#     else: 
-#         st.error('Passenger did not Survive :thumbsdown:') 
+def predict(): 
+    row = np.array([la,ev,release_speed,fav_platoon_split_for_batter,game_elevation,pull_percent]) 
+    X = pd.DataFrame([row], columns = columns)
+    prediction = model.predict(X)
 
-# trigger = st.button('Predict', on_click=predict)
+trigger = st.button('Predict', on_click=predict)
 
-st.title(prediction)
+st.title(prediction[0])
 
