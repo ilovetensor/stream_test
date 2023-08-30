@@ -1,8 +1,0 @@
-streamlit
-pandas
-scipy
-numpy
-ipywidgets
-matplotlib
-mplsoccer
-scikit-learn
