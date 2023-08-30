@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-st.title(':Baseball:')
+st.title('Baseball')
 
 df = pd.read_csv("Vars.csv")
 
