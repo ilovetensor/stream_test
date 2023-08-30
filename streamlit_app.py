@@ -11,7 +11,10 @@ df = pd.read_csv("Vars.csv")
 
 add_selectbox = st.sidebar.selectbox(
     "Exit Velocity",
-    (df['EV']),
+    (df['EV'])
+)
+
+add_selectbox = st.sidebar.selectbox(
     "Launch Angle",
     (df['LA'])
 )
