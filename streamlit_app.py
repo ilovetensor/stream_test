@@ -8,25 +8,24 @@ import joblib
 model = joblib.load('xgbr.joblib')
 
 st.title('Distance Predictor')
-
 la = st.slider("Choose LA",-50,50)
-
 ev = st.slider("Choose EV",0,100)
-
 release_speed = st.slider("Choose Release Speed",60,110)
-
 fav_platoon_split_for_batter = st.selectbox("Good Platoon Split?", [0,1])
-
 game_elevation = st.slider("Choose Game Elevation",20,7349) 
-
 pull_percent =  st.slider("Choose Pull %",0,100)
 
-prediction = 0
+df = pd.read_csv('final_input.csv')
 
-def predict(): 
-    row = np.array([la,ev,release_speed,fav_platoon_split_for_batter,game_elevation,pull_percent]) 
-    X = pd.DataFrame([row], columns = columns)
-    prediction = model.predict(X)
+df['launch_angle'].iloc[0] = la
+df['launch_speed'].iloc[0] = ev
+df['release_speed'].iloc[0] = release_speed
+df['fav_platoon_split_for_batter'].iloc[0] = fav_platoon_split_for_batter
+df['game_elevation'].iloc[0] = game_elevation
+df['pull_percent'].iloc[0] = pull_percent
+
+def predict():
+    prediction = model.predict(df)
 
 trigger = st.button('Predict', on_click=predict)
 
