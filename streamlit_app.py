@@ -9,7 +9,7 @@ df = pd.read_csv("Vars.csv")
 
 # Replicate Credentials
 with st.sidebar:
-    st.title('🦙💬 Llama 2 Chatbot')
+    st.title('Enter La and EV here...')
 
 la = st.sidebar.selectbox(
     "Launch Angle",
