@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# model = joblib.load('xgbr.joblib')
+model = joblib.load('xgbr.joblib')
 
 st.title('Distance Predictor')
 
@@ -24,6 +24,6 @@ df['pull_percent'].iloc[0] = pull_percent
 
 st.dataframe(df)
 
-# p =  model.predict(df)
+p =  model.predict(df)
 
-# st.write(p[0])
+st.write(p[0])
