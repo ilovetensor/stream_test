@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 
-st.title('🎈 App Name')
+st.title(':Baseball')
 
 st.write('Hello world!')
 
