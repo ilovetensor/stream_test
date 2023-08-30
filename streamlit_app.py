@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-# import joblib
+import joblib
 
 # model = joblib.load('xgbr.joblib')
 
@@ -22,10 +22,8 @@ df['fav_platoon_split_for_batter'].iloc[0] = fav_platoon_split_for_batter
 df['game_elevation'].iloc[0] = game_elevation
 df['pull_percent'].iloc[0] = pull_percent
 
+st.dataframe(df)
+
 # p =  model.predict(df)
 
 # st.write(p[0])
-
-st.dataframe(df)
-
-
