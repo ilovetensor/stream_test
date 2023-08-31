@@ -24,7 +24,9 @@ df['fav_platoon_split_for_batter'].iloc[0] = fav_platoon_split_for_batter
 df['game_elevation'].iloc[0] = game_elevation
 df['pull_percent'].iloc[0] = pull_percent
 
-st.dataframe(df)
+df_display = df
+
+st.dataframe(df_display)
 
 # p =  model.predict(df)
 
