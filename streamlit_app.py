@@ -13,7 +13,7 @@ ev = st.slider("Exit Velocity",0,120, value=60)
 pull_percent =  st.slider("Pull %",0.0,1.0, value = 0.5)
 release_speed = st.slider("Release Speed",60,110, value=85)
 game_elevation = st.slider("Game Elevation",20,7349, value=3665) 
-fav_platoon_split_for_batter = st.slider("Favorable Batter Platoon Split", 0,1, value = 1)
+fav_platoon_split_for_batter = st.slider("Favorable Platoon", 0,1, value = 1)
 
 
 df = pd.read_csv('final_input.csv')
