@@ -7,8 +7,8 @@ import joblib
 
 st.title('Distance Predictor')
 
-la = st.slider("Launch Angle",-50,50)
-ev = st.slider("Exit Velocity",60,120)
+la = st.slider("Launch Angle",0,50)
+ev = st.slider("Exit Velocity",0,120)
 release_speed = st.slider("Release Speed",60,110)
 fav_platoon_split_for_batter = st.slider("Favorable Batter Platoon Split", 0,1)
 game_elevation = st.slider("Game Elevation",20,7349) 
