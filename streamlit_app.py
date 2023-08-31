@@ -31,9 +31,9 @@ st.dataframe(df_display)
 
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
-pred = pickled_model.predict(final_vars)
+# pred = pickled_model.predict(final_vars)
 
-st.title(pred)
+st.title("test")
 
 
 # p =  model.predict(df)
