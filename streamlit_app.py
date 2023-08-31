@@ -29,6 +29,13 @@ df_display = df
 
 st.dataframe(df_display)
 
+
+pickled_model = pickle.load(open('model.pkl', 'rb'))
+pred = pickled_model.predict(final_vars)
+
+st.title(pred)
+
+
 # p =  model.predict(df)
 
 # st.write(p[0])
