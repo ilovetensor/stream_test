@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
-import joblib
+#import joblib
 #import pickle
 
 
 
 #joblib now imports but wtf no model........
-model = joblib.load('xgbr.joblib')
+#joblib_model = joblib.load('xgbr.joblib')
 
 st.title('Distance Predictor')
 
@@ -37,7 +37,7 @@ st.dataframe(df_display)
 #st.title("test")
 
 
-p =  model.predict(df)
+#p =  joblib_model.predict(df)
 st.title("test")
 
 
