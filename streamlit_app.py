@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 #import joblib
 import pickle
-left_co, cent_co,last_co = st.columns(3)
-
 
 #joblib now imports but wtf no model........
 #joblib_model = joblib.load('xgbr.joblib')
@@ -32,12 +30,13 @@ df_display = df
 st.dataframe(df_display)
 
 
- #pickled_model = pickle.load(open('model.pkl', 'rb'))
+#pickled_model = pickle.load(open('model.pkl', 'rb'))
 # pred = pickled_model.predict(final_vars)
-#st.title("test")
-
 
 #p =  joblib_model.predict(df)
+
+left_co, cent_co,last_co = st.columns(3)
+
 with cent_co:
     ok = st.button("Predict Distance")
 
