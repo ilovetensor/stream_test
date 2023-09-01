@@ -27,6 +27,7 @@ df['pull_percent'].iloc[0] = pull_percent
 
 df_display = df
 
+#display for debugging purposes
 st.dataframe(df_display)
 
 
