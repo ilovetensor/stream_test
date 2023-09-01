@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 #import joblib
 import pickle
+left_co, cent_co,last_co = st.columns(3)
 
 
 #joblib now imports but wtf no model........
@@ -37,6 +38,7 @@ st.dataframe(df_display)
 
 
 #p =  joblib_model.predict(df)
-ok = st.button("Predict Distance")
+with cent_co:
+    ok = st.button("Predict Distance")
 
 # st.write(p[0])
