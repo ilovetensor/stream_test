@@ -31,13 +31,12 @@ df_display = df
 st.dataframe(df_display)
 
 
-pickled_model = pickle.load(open('model.pkl', 'rb'))
+ #pickled_model = pickle.load(open('model.pkl', 'rb'))
 # pred = pickled_model.predict(final_vars)
 #st.title("test")
 
 
 #p =  joblib_model.predict(df)
-st.title("test")
-
+ok = st.button("Predict Distance")
 
 # st.write(p[0])
