@@ -35,9 +35,9 @@ st.dataframe(df_display)
 
 #p =  joblib_model.predict(df)
 
-left_co, cent_co,last_co = st.columns(3)
+co_0, co_1, co_2, co_3, co_4, co_5, co_6 = st.columns(7)
 
-with cent_co:
+with co_4:
     ok = st.button("Predict Distance")
 
 # st.write(p[0])
