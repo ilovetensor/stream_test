@@ -40,7 +40,7 @@ final_vars = df.iloc[0].T.values
 st.write(final_vars)
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
-pred = pickled_model.predict(final_vars)
+pred = pickled_model.predict(df)
 
 #p =  joblib_model.predict(df)
 
