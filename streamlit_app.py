@@ -36,7 +36,7 @@ df_display = df
 #display for debugging purposes
 st.dataframe(df_display)
 
-final_vars = np.array(df.iloc[0].values)).reshape(-1,1)
+final_vars = np.array(df.iloc[0].values).reshape(-1,1)
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
 pred = pickled_model.predict(final_vars)
