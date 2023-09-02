@@ -37,7 +37,7 @@ df_display = df
 st.dataframe(df_display)
 
 final_vars = [list(df.iloc[0].values)]
-print(final_vars)
+st.write(final_vars)
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
 pred = pickled_model.predict(final_vars)
