@@ -35,15 +35,16 @@ df_display = df
 #display for debugging purposes
 st.dataframe(df_display)
 
+final_vars = list(df.iloc[0].values)
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
-#pred = pickled_model.predict(final_vars)
+pred = pickled_model.predict(final_vars)
 
-p =  joblib_model.predict(df)
+#p =  joblib_model.predict(df)
 
 co_0, co_1, co_2, co_3, co_4, co_5, co_6 = st.columns(7)
 
 with co_3:
     ok = st.button("Predict Distance")
 
-st.write(p[0])
+st.write(pred[0])
