@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 #import joblib
 import pickle
+import numpy as np
 #import sklearn
 
 
@@ -35,7 +36,7 @@ df_display = df
 #display for debugging purposes
 st.dataframe(df_display)
 
-final_vars = df.iloc[0]
+final_vars = np.array([])
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
 pred = pickled_model.predict(final_vars)
