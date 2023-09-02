@@ -36,7 +36,7 @@ df_display = df
 #display for debugging purposes
 st.dataframe(df_display)
 
-final_vars = (df.iloc[0].values)
+final_vars = df.iloc[0].T.values
 st.write(final_vars)
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
