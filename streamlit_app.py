@@ -36,7 +36,7 @@ df_display = df
 #display for debugging purposes
 st.dataframe(df_display)
 
-final_vars = np.array([la,ev,release_speed,fav_platoon_split_for_batter,game_elevation,pull_percent])
+final_vars = df.iloc[0].T.values
 
 pickled_model = pickle.load(open('model.pkl', 'rb'))
 pred = pickled_model.predict(final_vars)
